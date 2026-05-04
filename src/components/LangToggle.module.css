@@ -1,0 +1,30 @@
+.toggle {
+  display: flex;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 2px;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.btn {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  background: transparent;
+  color: var(--text2);
+  border: none;
+  transition: all 0.15s;
+  font-family: inherit;
+  min-width: 38px;
+}
+
+.btn:hover { color: var(--text); }
+
+.active {
+  background: var(--blue);
+  color: #fff;
+}

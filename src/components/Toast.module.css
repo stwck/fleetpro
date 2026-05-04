@@ -1,0 +1,23 @@
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  padding: 11px 18px;
+  border-radius: var(--r);
+  font-size: 13px;
+  font-weight: 600;
+  z-index: 999;
+  animation: slideUp 0.2s ease;
+  max-width: 320px;
+  box-shadow: 0 4px 16px rgba(0,0,0,.4);
+}
+.success { background: var(--green); color: #fff; }
+.error   { background: var(--red);   color: #fff; }
+
+@keyframes slideUp {
+  from { transform: translateY(10px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+/* RTL toast */
+[dir="rtl"] .toast { right: auto; left: 24px; }

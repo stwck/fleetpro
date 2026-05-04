@@ -1,0 +1,103 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.modal {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  width: min(680px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.modalSm { width: min(440px, 100%); }
+
+.head {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+.head h2 { font-size: 15px; font-weight: 600; }
+
+.body { padding: 20px; }
+
+.foot {
+  padding: 12px 20px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.full { grid-column: 1 / -1; }
+
+.formGroup { display: flex; flex-direction: column; gap: 5px; }
+.formGroup label { font-size: 12px; font-weight: 600; color: var(--text2); }
+
+.arabicPreview {
+  font-size: 18px;
+  color: var(--purple);
+  direction: rtl;
+  text-align: right;
+  padding: 6px 0;
+  min-height: 32px;
+}
+
+/* Odometer */
+.odoDisplay {
+  background: var(--bg);
+  border: 1px solid var(--border2);
+  border-radius: var(--r);
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-family: 'Courier New', monospace;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fbbf24;
+  margin-top: 6px;
+  justify-content: center;
+  letter-spacing: 2px;
+}
+
+.odoDigit {
+  background: var(--bg3);
+  border-radius: 4px;
+  padding: 2px 6px;
+  min-width: 22px;
+  text-align: center;
+}
+
+.odoSep { color: var(--text3); font-size: 12px; margin: 0 1px; }
+
+.kmDiff { font-size: 13px; color: var(--amber); font-weight: 700; }
+
+.statusRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.totalNum { font-size: 22px; font-weight: 700; color: var(--blue); }
+
+@media (max-width: 600px) {
+  .grid { grid-template-columns: 1fr; }
+  .full { grid-column: 1; }
+}
